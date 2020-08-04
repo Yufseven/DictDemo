@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">DictDemo</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="plan_icon_title">计划</string>
+    <string name="word_icon_title">单词</string>
+    <string name="review_icon_title">复习</string>
+    <string name="account_icon_title">我</string>
+
+    <string name="form_title">表格</string>
+    <string name="search_title">搜索</string>
+    <string name="search_hint_message">请输入要查询的中文或英文</string>
+    <string name="cancel_message">取消</string>
+    <string name="clear_history_message">清除历史</string>
+
+    <string name="phonetic_message">/%s/</string>
+</resources>

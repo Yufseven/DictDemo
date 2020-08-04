@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--首页的四个按钮id-->
+    <item name="main_tabs_plan" type="id"/>
+    <item name="main_tabs_word" type="id"/>
+    <item name="main_tabs_review" type="id"/>
+    <item name="main_tabs_my" type="id"/>
+</resources>

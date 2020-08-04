@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/planFragment">
+
+    <fragment
+        android:id="@+id/planFragment"
+        android:name="god.dictdemo.ui.main.main_fragment.PlanFragment"
+        android:label="@string/plan_icon_title" />
+    <fragment
+        android:id="@+id/wordFragment"
+        android:name="god.dictdemo.ui.main.main_fragment.WordFragment"
+        android:label="@string/word_icon_title"
+        tools:layout="@layout/fragment_word" />
+    <fragment
+        android:id="@+id/reviewFragment"
+        android:name="god.dictdemo.ui.main.main_fragment.ReviewFragment"
+        android:label="@string/review_icon_title"
+        tools:layout="@layout/fragment_review" />
+    <fragment
+        android:id="@+id/accountFragment"
+        android:name="god.dictdemo.ui.main.main_fragment.AccountFragment"
+        android:label="@string/account_icon_title"
+        tools:layout="@layout/fragment_account" />
+</navigation>
