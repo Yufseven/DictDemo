@@ -14,20 +14,29 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-
         <!-- ============================activity区域============================ -->
-        <activity android:name=".ui.BaseActivity"/>
-        <activity android:name=".ui.main.plan.DictDetailActivity"/>
-        <activity android:name=".ui.main.plan.DictListActivity"/>
+        <activity android:name=".ui.main.word.EnglishSelectionActivity" />
+        <activity android:name=".ui.main.word.ChineseSelectionActivity" />
+        <activity android:name=".ui.main.word.ListenedSelectionActivity" />
+        <activity android:name=".ui.main.word.BaseWordActivity" />
+        <activity android:name=".ui.BaseActivity" />
+        <activity android:name=".ui.main.plan.DictDetailActivity" />
+        <activity android:name=".ui.main.plan.DictListActivity" />
         <activity android:name=".ui.main.plan.PlanFormActivity" />
-        <activity android:name=".ui.main.plan.PlanSearchActivity" />
-        <activity android:name=".ui.main.MainActivity">
+        <activity
+            android:name=".ui.main.plan.PlanSearchActivity" />
+        <activity android:name=".ui.main.MainActivity" />
+        <activity android:name=".ui.splash.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity> <!-- ============================service区域============================ -->
+        </activity>
+
+        <!-- ============================service区域============================ -->
+
+
         <!-- ============================provider区域============================ -->
         <provider
             android:name="androidx.core.content.FileProvider"

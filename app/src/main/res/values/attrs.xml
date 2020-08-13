@@ -2,7 +2,31 @@
 <resources>
     <!--TitleBarLayout的属性-->
     <declare-styleable name="TitleBarLayout">
+        <!--返回键图片资源-->
         <attr name="imageSrc" format="reference" />
+        <!--标题文字-->
         <attr name="titleText" format="string" />
     </declare-styleable>
+
+    <declare-styleable name="SrcScrollFrameLayout">
+        <!--背景图片-->
+        <attr name="src" format="reference" />
+        <!--遮罩层颜色，建议带透明度-->
+        <attr name="maskLayerColor" format="color" />
+        <!--是否滚动-->
+        <attr name="isScroll" format="boolean" />
+        <!--滚动速度，建议取值区间 [1,50] -->
+        <attr name="speed" format="integer">
+            <enum name="slow" value="1" />
+            <enum name="ordinary" value="3" />
+            <enum name="fast" value="5" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="FunctionCardView">
+        <attr name="fun_src" format="reference" />
+        <attr name="fun_title" format="string" />
+        <attr name="fun_type" format="string" />
+    </declare-styleable>
+
 </resources>

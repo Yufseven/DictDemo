@@ -80,10 +80,10 @@ public abstract class BaseRecyclerAdapter extends RecyclerView.Adapter<BaseViewH
     }
 
     public interface OnItemClickListener {
-        void onItemClick(View v, int position, BaseBean bean);
+        <T> void onItemClick(View v, int position, T bean);
     }
 
     public interface OnItemLongClickListener {
-        void onItemLongClick(View v, int position, BaseBean bean);
+        <T> void onItemLongClick(View v, int position, T bean);
     }
 }

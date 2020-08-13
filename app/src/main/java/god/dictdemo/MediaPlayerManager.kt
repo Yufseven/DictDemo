@@ -1,13 +1,27 @@
 package god.dictdemo
 
+import android.content.Context
+import android.content.res.AssetFileDescriptor
 import android.media.AudioManager
 import android.media.MediaPlayer
-import java.lang.Exception
 
 class MediaPlayerManager : MediaPlayer() {
-    private var isLoopPlay = false
 
+    @Throws(Exception::class)
+    fun play(context: Context, resid: Int) {
+        reset()
+        val afd: AssetFileDescriptor = context.getResources().openRawResourceFd(resid) ?: return
+
+        setDataSource(afd.fileDescriptor, afd.startOffset, afd.length)
+        afd.close()
+        prepareAsync()
+
+        initEvent()
+    }
+
+    @Throws(Exception::class)
     fun play(path: String, loopPlay: Boolean = false, listener: OnPlayListener) {
+        reset()
         if (isPlaying) {
             release()
             play(path, loopPlay, listener)
@@ -15,21 +29,41 @@ class MediaPlayerManager : MediaPlayer() {
         //设置音频流的类型
         setAudioStreamType(AudioManager.STREAM_MUSIC)
 
-        try {
-            setDataSource(path)
-            prepareAsync()
-        } catch (e: Exception) {
-            e.printStackTrace()
-        }
+        setDataSource(path)
+        prepareAsync()
 
         // 设置监听
+        initEvent(listener, loopPlay)
+    }
+
+    private fun initEvent(loopPlay: Boolean = false) {
+        setOnPreparedListener {
+            it.start()
+        }
+        setOnCompletionListener {
+            if (loopPlay) {
+                it.start()
+            } else {
+                it.release()
+            }
+        }
+        setOnErrorListener { mp, what, extra ->
+            mp.release()
+            false
+        }
+    }
+
+    private fun initEvent(
+        listener: OnPlayListener,
+        loopPlay: Boolean
+    ) {
         setOnPreparedListener {
             listener.onPrepare(it)
             it.start()
         }
         setOnCompletionListener {
             listener.onCompleted(it)
-            if (isLoopPlay) {
+            if (loopPlay) {
                 it.start()
             } else {
                 it.release()

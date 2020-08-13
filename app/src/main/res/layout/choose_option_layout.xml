@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/selectOptionOne"
+        android:layout_width="379dp"
+        android:layout_height="@dimen/title_height"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/selectOptionTwo"
+        app:layout_constraintEnd_toEndOf="@+id/selectOptionTwo"
+        app:layout_constraintStart_toStartOf="@+id/selectOptionTwo"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/selectOptionOneTv"
+            style="@style/tv_choice_question"
+            tools:text="选择一选择一选择一选择一选择一选择一选择一选择一选择一选择一选择一选择一选择一" />
+
+        <ImageView
+            android:id="@+id/selectOptionOneIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginEnd="20dp"
+            android:visibility="gone"
+            app:srcCompat="@drawable/ic_correct" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/selectOptionTwo"
+        android:layout_width="379dp"
+        android:layout_height="@dimen/title_height"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/selectOptionThree"
+        app:layout_constraintEnd_toEndOf="@+id/selectOptionThree"
+        app:layout_constraintStart_toStartOf="@+id/selectOptionThree"
+        app:layout_constraintTop_toBottomOf="@+id/selectOptionOne">
+
+        <TextView
+            android:id="@+id/selectOptionTwoTv"
+            style="@style/tv_choice_question"
+            tools:text="选择二" />
+
+        <ImageView
+            android:id="@+id/selectOptionTwoIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginEnd="20dp"
+            android:visibility="gone"
+            app:srcCompat="@drawable/ic_correct" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/selectOptionThree"
+        android:layout_width="379dp"
+        android:layout_height="@dimen/title_height"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/selectOptionFour"
+        app:layout_constraintEnd_toEndOf="@+id/selectOptionFour"
+        app:layout_constraintStart_toStartOf="@+id/selectOptionFour"
+        app:layout_constraintTop_toBottomOf="@+id/selectOptionTwo">
+
+        <TextView
+            android:id="@+id/selectOptionThreeTv"
+            style="@style/tv_choice_question"
+            tools:text="选择三" />
+
+        <ImageView
+            android:id="@+id/selectOptionThreeIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginEnd="20dp"
+            android:visibility="gone"
+            app:srcCompat="@drawable/ic_incorrect" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/selectOptionFour"
+        android:layout_width="379dp"
+        android:layout_height="@dimen/title_height"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/selectOptionThree">
+
+        <TextView
+            android:id="@+id/selectOptionFourTv"
+            style="@style/tv_choice_question"
+            tools:text="选择四" />
+
+        <ImageView
+            android:id="@+id/selectOptionFourIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginEnd="20dp"
+            android:visibility="gone"
+            app:srcCompat="@drawable/ic_correct" />
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

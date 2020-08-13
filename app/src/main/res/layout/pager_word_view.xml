@@ -17,7 +17,18 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:text="我是单词详情" />
 
-    <com.airbnb.lottie.LottieAnimationView
+    <!--<com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/readWord"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/wordDesc"
+        app:layout_constraintEnd_toEndOf="@+id/wordDesc"
+        app:layout_constraintStart_toStartOf="@+id/wordDesc"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/read_word_with_lottie"
+        tools:srcCompat="@tools:sample/avatars" />-->
+
+    <god.dictdemo.view.ReadWordAnimationView
         android:id="@+id/readWord"
         android:layout_width="50dp"
         android:layout_height="50dp"

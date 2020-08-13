@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<god.dictdemo.view.SrcScrollFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/splashRootView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:isScroll="true"
+    app:maskLayerColor="#90000000"
+    app:speed="ordinary"
+    tools:context=".ui.splash.SplashActivity">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/splashForward"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginBottom="64dp"
+        android:clickable="true"
+        app:backgroundTint="#FAF9F9"
+        app:srcCompat="@drawable/ic_baseline_arrow_forward" />
+</god.dictdemo.view.SrcScrollFrameLayout>

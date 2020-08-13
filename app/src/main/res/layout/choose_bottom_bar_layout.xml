@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical">
+
+    <ImageView
+        android:id="@+id/selectCollection"
+        android:layout_width="0dp"
+        android:layout_height="21dp"
+        android:layout_weight="1"
+        app:srcCompat="@drawable/ic_uncollection" />
+
+    <ImageView
+        android:id="@+id/selectTip"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:layout_weight="1"
+        app:srcCompat="@drawable/ic_tip" />
+
+    <god.dictdemo.view.ReadWordAnimationView
+        android:id="@+id/selectRead"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_weight="1"
+        app:lottie_rawRes="@raw/read_word_with_lottie" />
+
+</LinearLayout>

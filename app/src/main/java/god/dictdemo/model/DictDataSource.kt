@@ -5,7 +5,7 @@ import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import androidx.paging.PageKeyedDataSource
 import god.dictdemo.utils.E
-import god.dictdemo.utils.copy2FileDir
+import god.dictdemo.utils.FileUtil
 import kotlinx.coroutines.*
 import java.io.File
 import java.lang.Exception
@@ -51,7 +51,7 @@ class DictDataSource(private val context: Context) : PageKeyedDataSource<Int, Di
     suspend fun fetchData(size: Int): ArrayList<DictItem> {
         val result = ArrayList<DictItem>()
         withContext(Dispatchers.IO) {
-            copy2FileDir(context, DATABASE_NAME)
+            FileUtil.copy2FileDir(context, DATABASE_NAME)
             val file = File(context.filesDir, DATABASE_NAME)
             var cursor: Cursor? = null
             try {

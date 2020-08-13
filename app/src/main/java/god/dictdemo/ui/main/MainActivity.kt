@@ -2,11 +2,13 @@ package god.dictdemo.ui.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.activity.viewModels
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import god.dictdemo.R
+import god.dictdemo.database.word.WordViewModel
 import kotlinx.android.synthetic.main.account_icon_layout.*
 import kotlinx.android.synthetic.main.contact_icon_layout.*
 import kotlinx.android.synthetic.main.explore_icon_layout.*
@@ -36,17 +38,8 @@ class MainActivity : AppCompatActivity() {
         navController.addOnDestinationChangedListener { controller, destination, arguments ->
             controller.popBackStack()   // 将返回栈清空，避免出现点击back键回到上一次点击
             destinationMap.values.forEach { it.progress = 0f }
-//            messageMotionLayout.progress = 0f
-//            contactMotionLayout.progress = 0f
-//            exploreMotionLayout.progress = 0f
-//            accountMotionLayout.progress = 0f
             destinationMap[destination.id]?.transitionToEnd()
-//            when (destination.id) {
-//                R.id.verticalListFragment2 -> messageMotionLayout.transitionToEnd()
-//                R.id.contactFragment -> contactMotionLayout.transitionToEnd()
-//                R.id.exploreFragment -> exploreMotionLayout.transitionToEnd()
-//                R.id.accountFragment -> accountMotionLayout.transitionToEnd()
-//            }
         }
+
     }
 }

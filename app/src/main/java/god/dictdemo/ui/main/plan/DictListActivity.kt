@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import god.dictdemo.R
 import god.dictdemo.adapter.DictAdapter
 import god.dictdemo.ui.BaseActivity
-import god.dictdemo.viewmodel.DictViewModel
+import god.dictdemo.model.DictViewModel
 import kotlinx.android.synthetic.main.activity_dict_list.*
 
 class DictListActivity : BaseActivity() {

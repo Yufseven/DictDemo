@@ -1,4 +1,4 @@
-package god.dictdemo.viewmodel
+package god.dictdemo.model
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
